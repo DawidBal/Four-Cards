@@ -1,7 +1,29 @@
+@use 'variables';
+
+html {
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--links);
 }
