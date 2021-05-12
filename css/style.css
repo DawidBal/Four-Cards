@@ -46,6 +46,10 @@ body {
   flex-direction: column;
 }
 
+.normal {
+  font-weight: 200;
+}
+
 .main {
   margin: 3rem 2rem;
   gap: 2rem;
@@ -56,13 +60,17 @@ body {
   text-align: center;
 }
 
+.title,
+.sub-title {
+  font-size: clamp(1.6rem, 1rem + 2vw, 2.5rem);
+}
+
 .title {
-  font-size: 1.6rem;
   color: var(--very-dark-blue);
 }
 
-.normal {
-  font-weight: 200;
+.sub-title {
+  color: var(--very-dark-blue);
 }
 
 .desc {
@@ -73,17 +81,12 @@ body {
   color: var(--grayish-blue);
 }
 
-.sub-title {
-  font-size: 1.6rem;
-  color: var(--very-dark-blue);
-}
-
 .card {
   grid-template-rows: auto 1fr;
   gap: 3rem;
   padding: 2rem;
   border-radius: 5px;
-  box-shadow: 0 15px 70px -60px #000;
+  box-shadow: 0 15px 80px -55px var(--very-dark-blue);
   border-top: 0.3rem solid transparent;
 }
 .card__title {
@@ -105,6 +108,43 @@ body {
   border-top-color: var(--card-blue);
 }
 
+.small {
+  font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .main {
+    margin: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "title title title" ". card-red ." "card-cyan card-red card-blue" "card-cyan card-orange card-blue" ". card-orange .";
+  }
+
+  .title-wrapper {
+    grid-area: title;
+    margin-bottom: 2rem;
+  }
+
+  .desc {
+    width: 55ch;
+    font-size: 1.2rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+  .card--cyan {
+    grid-area: card-cyan;
+  }
+  .card--red {
+    grid-area: card-red;
+  }
+  .card--orange {
+    grid-area: card-orange;
+  }
+  .card--blue {
+    grid-area: card-blue;
+  }
+}
 .icon {
   justify-self: flex-end;
 }
