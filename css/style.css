@@ -91,9 +91,11 @@ body {
 }
 .card__title {
   color: var(--very-dark-blue);
+  margin-bottom: 0.5rem;
 }
 .card__disc {
   color: var(--grayish-blue);
+  line-height: 1.6;
 }
 .card--cyan {
   border-top-color: var(--card-cyan);

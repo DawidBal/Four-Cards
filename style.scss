@@ -80,9 +80,11 @@ body {
     border-top: 0.3rem solid transparent;
     &__title {
         color: var(--very-dark-blue);
+        margin-bottom: 0.5rem;
     }
     &__disc {
         color: var(--grayish-blue);
+        line-height: 1.6;
     }
     &--cyan {
         border-top-color: var(--card-cyan);
